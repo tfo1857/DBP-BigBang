@@ -24,7 +24,7 @@ istio:
         mode: "PASSTHROUGH"
         
 gatekeeper:
-  enabled: true
+  enabled: false
   values:
     replicas: 1
     controllerManager:
@@ -50,7 +50,7 @@ gatekeeper:
 
 addons:
   argocd:
-    enabled: true
+    enabled: false
     values:
       istio:
         argocd:
@@ -104,7 +104,7 @@ addons:
   gitlabRunner:
     enabled: false
   sonarqube:
-    enabled: true
+    enabled: false
     sso:
       enabled: true
       group: ""
@@ -122,7 +122,7 @@ addons:
       plugins:
         image: "registry1.dso.mil/ironbank/sonarsource/sonarqube/sonarqube8-developer:8.9.9-developer"
   nexus:
-    enabled: true
+    enabled: false
     values:
       hostname: nexus-tforrester
       persistence:
@@ -274,7 +274,7 @@ addons:
           apiAddr: https://vault-tforrester.theo.dbp.sh
           
   velero:
-    enabled: true
+    enabled: false
     plugins:
     - aws
     values:
@@ -304,7 +304,7 @@ addons:
           config:
             region: us-gov-east-1
   keycloak:
-    enabled: true
+    enabled: false
     ingress:
       gateway: "passthrough"
       key: |
@@ -523,7 +523,7 @@ addons:
 
 
 twistlock:
-  enabled: true
+  enabled: false
   sso:
     enabled: true
   values:
@@ -541,7 +541,7 @@ flux:
     cleanupOnFail: false
 
 logging:
-  enabled: true
+  enabled: false
   values:
     istio:
       kibana:
@@ -560,7 +560,7 @@ logging:
       count: 1
 
 monitoring:
-  enabled: true
+  enabled: false
   values:
     prometheus:
         prometheusSpec:
@@ -580,16 +580,16 @@ monitoring:
           - grafana-tforrester.theo.dbp.sh
       
 eckoperator:
-  enabled: true
+  enabled: false
 
 fluentbit:
-  enabled: true
+  enabled: false
   values:
     securityContext:
       privileged: true
 
 clusterAuditor:
-  enabled: true
+  enabled: false
 
 kiali:
   enabled: true
