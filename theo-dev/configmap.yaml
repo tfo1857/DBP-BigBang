@@ -128,7 +128,7 @@ addons:
       persistence:
         storageSize: 200Gi
   vault:
-    enabled: true
+    enabled: false
     ingress:
       gateway: "passthrough"
       key: |
@@ -541,7 +541,7 @@ flux:
     cleanupOnFail: false
 
 logging:
-  enabled: false
+  enabled: true
   values:
     istio:
       kibana:
@@ -560,7 +560,7 @@ logging:
       count: 1
 
 monitoring:
-  enabled: false
+  enabled: true
   values:
     prometheus:
         prometheusSpec:
@@ -583,7 +583,7 @@ eckoperator:
   enabled: false
 
 fluentbit:
-  enabled: false
+  enabled: true
   values:
     securityContext:
       privileged: true
