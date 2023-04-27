@@ -541,7 +541,7 @@ flux:
     cleanupOnFail: false
 
 logging:
-  enabled: true
+  enabled: false
   values:
     istio:
       kibana:
@@ -560,7 +560,7 @@ logging:
       count: 1
 
 monitoring:
-  enabled: true
+  enabled: false
   values:
     prometheus:
         prometheusSpec:
@@ -583,7 +583,7 @@ eckoperator:
   enabled: false
 
 fluentbit:
-  enabled: true
+  enabled: false
   values:
     securityContext:
       privileged: true
