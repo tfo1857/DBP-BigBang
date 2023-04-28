@@ -128,7 +128,7 @@ addons:
       persistence:
         storageSize: 200Gi
   vault:
-    enabled: false
+    enabled: true
     ingress:
       gateway: "passthrough"
       key: |
