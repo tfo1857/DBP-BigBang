@@ -541,7 +541,7 @@ flux:
     cleanupOnFail: false
 
 logging:
-  enabled: false
+  enabled: true
   values:
     istio:
       kibana:
